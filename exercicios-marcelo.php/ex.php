@@ -5,7 +5,7 @@ $people = [
         "cidade" => "Novo Hamburgo",
         "sexo" => "masculino",
         // caso queira testar, você pode comentar esta linha de baixo que mostra o telefone.
-        "telefone" => "51 992236669",
+        "telefone" => "",
 
         "pai" => [
             "nome" => "Humberto",
@@ -49,13 +49,19 @@ foreach ($people as $key => $info) {
     $cityMother = $info["mãe"]["cidade"];
     $fone = $info["telefone"];
 
+    
+    $phraseA = ("$name nasceu em $yourCity, seu pai é $father e sua mãe é $mother.
+    Sua mãe nasceu em $cityMother e seu pai em $cityFather.
+    E se quiser entar em contato com $name, basta ligar para: $fone.\n\n");
+
+    $phraseB = ("$name nasceu em $yourCity, seu pai é $father e sua mãe é $mother.
+    Sua mãe nasceu em $cityMother e seu pai em $cityFather.
+    Infelizmente não temos o contato de $name!\n\n");
+
+
     if ($fone == true) {
-        echo "$name nasceu em $yourCity, seu pai é $father e sua mãe é $mother.
-    Sua mãe nasceu em $cityMother e seu pai em $cityFather.
-    Caso precise entrar em contato com o $name, seu contato é $fone! \n \n";
+        echo $phraseA;
     } else {
-        echo "$name nasceu em $yourCity, seu pai é $father e sua mãe é $mother.
-    Sua mãe nasceu em $cityMother e seu pai em $cityFather.
-    Infelizmente não temos o telefone para contato de $name! \n \n";
+        echo $phraseB;
     }
 }
