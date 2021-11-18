@@ -4,6 +4,7 @@ $people = [
         "nome" => "Augusto Brito",
         "cidade" => "Novo Hamburgo",
         "sexo" => "masculino",
+        // caso queira testar, você pode comentar esta linha de baixo que mostra o telefone.
         "telefone" => "51 992236669",
 
         "pai" => [
