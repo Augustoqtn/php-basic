@@ -11,12 +11,14 @@ $people = [
             "nome" => "Humberto",
             "cidade" => "Porto Alegre",
             "sexo" => "masculino",
+            "telefone" => "1111111111",
         ],
 
         "mãe" => [
             "nome" => "Florinda",
             "cidade" => "Sapiranga",
             "sexo" => "feminino",
+            "telefone" => "0000000000",
         ],
     ],
     "Marcelo" => [
@@ -29,12 +31,14 @@ $people = [
             "nome" => "Marcelo pai",
             "cidade" => "noia",
             "sexo" => "masculino",
+            "telefone" => "2222222222222",
         ],
 
         "mãe" => [
             "nome" => "Florinda",
             "cidade" => "Sapiranga",
             "sexo" => "feminino",
+            "telefone" => "3333333333333",
         ],
     ],
 ];
@@ -43,22 +47,27 @@ foreach ($people as $key => $info) {
     // $name = $people[$key]["nome"];
     $name = $info["nome"];
     $yourCity = $info["cidade"];
+    $youFone = $info["telefone"];
     $father = $info["pai"]["nome"];
+    $fatherCity = $info["pai"]["cidade"];
+    $fatherFone = $info["mãe"]["telefone"];
     $mother = $info["mãe"]["nome"];
-    $cityFather = $info["pai"]["cidade"];
-    $cityMother = $info["mãe"]["cidade"];
-    $fone = $info["telefone"];
+    $motherCity = $info["mãe"]["cidade"];
+    $motherFone = $info["pai"]["telefone"];
+    $allData = "Nome: $name    
+    Sua cidade: $yourCity 
+    Seu telefone: $youFone \n
+    Nome do pai: $father 
+    Cidade do pai: $fatherCity 
+    Numero do pai: $fatherFone \n
+    Nome da mãe: $mother 
+    Cidade da mãe: $motherCity 
+    Numero da mãe: $motherFone\n";
 
-    $phraseA = "$name nasceu em $yourCity, seu pai é $father e sua mãe é $mother.
-    Sua mãe nasceu em $cityMother e seu pai em $cityFather.\n";
 
-    $phraseB = "$phraseA Infelizmente este contato não deixou seu numero.\n";
-
-    $havePhone = "$phraseA O numero de telefone é: $fone.\n";
-
-    if ($fone == true) {
-        echo $havePhone;
+    if ($youFone == true) {
+        echo "$allData\n";
     } else {
-        echo $phraseB;
+        echo "$allData\n";
     }
 }
