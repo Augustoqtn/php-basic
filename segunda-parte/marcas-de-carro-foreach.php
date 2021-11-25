@@ -32,6 +32,10 @@ foreach ($cars as $key => $infoCar) {
     } else if ($carExpenses >= 10) {
         echo " o $carName é um carro meio termo. Ele faz $carExpenses quilomentros por litro!\n";
     } else if ($carExpenses <= 9) {
-        echo " o $carName é um carroque gasta muito. Ele faz $carExpenses quilomentros por litro!\n";
+        echo " o $carName é um carro 
+        
+        
+        
+        que gasta muito. Ele faz $carExpenses quilomentros por litro!\n";
     }
 };
