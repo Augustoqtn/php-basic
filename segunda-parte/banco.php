@@ -32,7 +32,7 @@
         ],
     ];
 
-    $account = drew($bankAccounts["account1"], 50);
+    $account = drew($bankAccounts["account1"], 1230);
     $bankAccounts["account1"] = $account;
 
     foreach ($bankAccounts as $info => $account) {
