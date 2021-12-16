@@ -12,7 +12,7 @@
         } else {
             $account['value'] -= $valorASacar;
         }
-        return $account;
+        return $account;    
     }
     $bankAccounts = [
         "account1" => [
@@ -32,7 +32,7 @@
         ],
     ];
 
-    $account = drew($bankAccounts["account1"], 12);
+    $account = drew($bankAccounts["account1"], 50);
     $bankAccounts["account1"] = $account;
 
     foreach ($bankAccounts as $info => $account) {
