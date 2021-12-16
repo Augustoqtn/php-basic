@@ -26,13 +26,13 @@
             "cpf" => "23443567890"
         ],
         "account3" => [
-            "name" => "Bruno",
+            "name" => "Ricardo",
             "value" => 3500,
             "cpf" => "02112344450"
         ],
     ];
 
-    $account = drew($bankAccounts["account1"], 1230);
+    $account = drew($bankAccounts["account1"], 123);
     $bankAccounts["account1"] = $account;
 
     foreach ($bankAccounts as $info => $account) {
