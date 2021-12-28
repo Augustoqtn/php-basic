@@ -1,19 +1,7 @@
 <?php
-    function printAccount($account)
-    {
-        // showMessage("CPF:$cpf NOME:$holder SALDO:$fund");
-        echo "\nCPF:" . $account["cpf"] . "\nNOME:" . $account["name"] . "\nSALDO:" . $account["value"] . "\n";
-    }
 
-    function drew($account, $valorASacar)
-    {
-        if ($valorASacar > $account['value']) {
-            echo "Você não pode sacar este valor";
-        } else {
-            $account['value'] -= $valorASacar;
-        }
-        return $account;    
-    }
+ include "funcoes-banco.php";
+
     $bankAccounts = [
         "account1" => [
             "name" => "Augusto",
@@ -34,6 +22,13 @@
 
     $account = drew($bankAccounts["account1"], 123);
     $bankAccounts["account1"] = $account;
+
+    $account = drew($bankAccounts["account2"], 123);
+    $bankAccounts["account2"] = $account;
+
+    $account = desposit($bankAccounts["account3"],3000);
+    $bankAccounts["account3"] = $account;
+  
 
     foreach ($bankAccounts as $info => $account) {
         printAccount($account);
