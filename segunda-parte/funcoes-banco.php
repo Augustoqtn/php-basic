@@ -14,7 +14,7 @@
        } else { 
            $account['value'] -= $valorASacar;
        }
-       return $account;    
+       return $account; 
    }
 
    function desposit ($account,$depositAmount) {
@@ -26,3 +26,8 @@
        }   
        return $account;
    };
+
+   function showAccount (array $account) 
+   {
+       echo"<li>Titular: {$account["name"]} Saldo: {$account["value"]}</li>";
+   }
